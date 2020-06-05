@@ -22,7 +22,7 @@ var postSchema = new mongoose.Schema({body:String})
 
 var post = mongoose.model('post',postSchema)
 
-app.post('/addpost',(req,res) => {
+app.post('/post',(req,res) => {
       var postData = new post(req.body)
       
       postData.save().then(result => {
